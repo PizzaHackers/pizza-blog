@@ -48,24 +48,7 @@ config = {
         mail: {},
         database: {
             client: 'postgres',
-            connection: function() {
-                    // DATABASE_URL = postgres://user:password@hostname.com:5432/dbName
-                    var dbUrl = url.parse(process.env['DATABASE_URL']);
-                    var auth = (dbUrl.auth || ':').split(':');
-                    var user = auth[0];
-                    var password = auth[1];
-                    var host = dbUrl.hostname;
-                    var port = dbUrl.port ? dbUrl.port : '5432'
-                    var database = dbUrl.pathname ? dbUrl.pathname.slice(1) : null;
-                    var config = {
-                        host: host,
-                        port: port,
-                        user: user,
-                        password: password,
-                        database: database
-                    };
-                    return config; 
-                }(),
+            connection: process.env.DATABASE_URL,
             debug: false
         },
         server: {
