@@ -44,15 +44,15 @@ config = {
     // When running Ghost in the wild, use the production environment
     // Configure your URL and mail settings here
     production: {
-        url: 'http://blog.pizzahackers.org',
+        url: 'http://pizzablog.herokuapp.com',
         mail: {},
         database: {
             client: 'postgres',
             connection: {
-		    host: 'ec2-174-129-218-200.compute-1.amazonaws.com',
-		    user: 'biiefzqhanlbnl',
-		    password: 'L6rXOZJfaMu4m4YlXopIuFh4FY',
-		    database: 'd81qiv7r4h3ocp',
+		    host: process.env.POSTGRES_HOST,
+		    user: process.env.POSTGRES_USER,
+		    password: process.env.POSTGRES_PASSWORD,
+		    database: process.env.POSTGRES_DATABASE,
 		    port: '5432'
             },
             debug: false
