@@ -34,10 +34,11 @@
                     <a class="button-square" href="{{@blog.url}}/rss"><i class="fa fa-rss"></i></a>
                 </div>
 
-                <ul class="site-nav">
+		<ul class="site-nav">
+		    <li class="site-nav-item"><a href="http://pizzahackers.org">Home</a></li>
                     <li class="site-nav-item"><a class="js-ajax-link" href="{{@blog.url}}">Latest Post</a></li>
                     <li class="site-nav-item"><a class="js-ajax-link js-show-index" href="{{@blog.url}}">Browse Posts</a></li>
-                    <li class="site-nav-item"><a class="js-ajax-link" href="/about">About</a></li>
+		    <!-- <li class="site-nav-item"><a class="js-ajax-link" href="/about">About</a></li> -->
                 </ul>
             </div>
         </header>
@@ -55,7 +56,7 @@
                 <a class="button-square button-jump-top js-jump-top" href="#"><i class="fa fa-angle-up"></i></a>
             </div>
 
-            <p class="footer-copyright">&copy; {{date format="YYYY"}} / Published with <a href="http://tryghost.org">Ghost</a> / <a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></p>
+            <p class="footer-copyright">&copy; {{date format="YYYY"}} / Made with &hearts; by <a href="http://fb.com/sanketsaurav">Sanket</a> using Ghost</p>
         </div>
     </footer>
 
